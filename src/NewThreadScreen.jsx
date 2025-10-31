@@ -1,5 +1,6 @@
 import React, { useState, useRef, useLayoutEffect } from "react";
 import "./NewThreadScreen.css";
+import { supabase } from "./supabaseClient";
 
 const myAvatarUrl = "https://i.pravatar.cc/150?img=1";
 
@@ -9,21 +10,42 @@ const NewThreadScreen = ({ username = "kmodi21", onNavigate }) => {
   const [error, setError] = useState("");
   const textareaRef = useRef(null);
 
-  const handlePost = () => {
+  const handlePost = async () => {
     if (content.trim() === "") {
       setError("Content cannot be empty.");
       setTimeout(() => setError(""), 3000);
       return;
     }
     setIsPosting(true);
-    console.log(`Publicando nuevo hilo para ${username}: ${content}`);
+    setError("");
 
-    setTimeout(() => {
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
+
+    if (!user) {
+      setError("You must be logged in to post.");
       setIsPosting(false);
-      setContent("");
-      setError("");
+      return;
+    }
+
+    const { error: insertError } = await supabase.from("threads").insert([
+      {
+        content: content.trim(),
+        username: username,
+        user_id: user.id,
+        avatar: myAvatarUrl, // Using the static avatar for now
+        likes: 0,
+      },
+    ]);
+
+    if (insertError) {
+      setError(insertError.message);
+    } else {
       onNavigate("feed");
-    }, 2000);
+    }
+
+    setIsPosting(false);
   };
 
   const handleClose = () => {
@@ -75,7 +97,10 @@ const NewThreadScreen = ({ username = "kmodi21", onNavigate }) => {
                 className="content-textarea"
                 placeholder="Start a thread..."
                 value={content}
-                onChange={(e) => setContent(e.target.value)}
+                onChange={(e) => {
+                  setContent(e.target.value);
+                  if (error) setError("");
+                }}
                 rows={1}
                 disabled={isPosting}
               />
