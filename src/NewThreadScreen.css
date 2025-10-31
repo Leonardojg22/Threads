@@ -1,0 +1,161 @@
+.simulated-app-pc-container-new-thread {
+  background-color: #f0f0f0;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.simulated-device-frame-new-thread {
+  width: 375px;
+  height: 667px;
+  background-color: white;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.new-thread-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+  background-color: white;
+  height: 50px;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.header-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.post-button {
+  background: none;
+  border: none;
+  color: #a0c6f5;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: default;
+  padding: 5px 10px;
+  border-radius: 20px;
+  transition: color 0.2s;
+}
+.post-button.post-active {
+  color: #0095f6;
+  cursor: pointer;
+}
+.post-button:disabled {
+  color: #a0c6f5;
+  cursor: default;
+}
+
+.new-thread-composition-area {
+  padding: 15px;
+  flex-grow: 1;
+  background-color: white;
+}
+
+.thread-input-row {
+  display: flex;
+}
+
+.thread-left-column-compose {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 15px;
+  position: relative;
+}
+
+.compose-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 2;
+  margin-bottom: 5px;
+}
+
+.compose-vertical-line {
+  width: 2px;
+  height: 100px;
+  background-color: #eee;
+  position: absolute;
+  top: 40px;
+  z-index: 1;
+}
+
+.reply-avatar-placeholder {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  object-fit: cover;
+  opacity: 0.5;
+  margin-top: auto;
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+}
+
+.thread-right-column-compose {
+  flex-grow: 1;
+}
+
+.username-display {
+  font-weight: 600;
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.content-textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  font-size: 16px;
+  color: #333;
+  padding: 0;
+  line-height: 1.4;
+  min-height: 80px;
+}
+
+.compose-actions-bottom {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+.attachment-icon {
+  font-size: 20px;
+  color: #8e8e93;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.add-to-thread-text {
+  color: #8e8e93;
+  font-size: 14px;
+}
+
+.error-message {
+  color: #d9534f;
+  font-size: 14px;
+}

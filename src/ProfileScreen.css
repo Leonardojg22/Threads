@@ -1,0 +1,259 @@
+.simulated-app-pc-container-profile {
+  background-color: #f0f0f0;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.threads-profile-frame {
+  width: 100%;
+  max-width: 700px;
+  height: 100vh;
+  background-color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.settings-icon,
+.threads-global-icon,
+.logout-button-top {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 15px;
+  color: #333;
+}
+
+.logout-button-top {
+  background-color: transparent;
+  border: 1px solid #dbdbdb;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  transition: background-color 0.2s ease;
+}
+.logout-button-top:hover {
+  background-color: #f0f0f0;
+}
+
+.profile-content-scroll {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-bottom: 50px;
+}
+
+.profile-info-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 15px;
+}
+
+.profile-text-info {
+  flex-grow: 1;
+}
+
+.profile-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.profile-username {
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.profile-badge {
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  padding: 3px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+  margin-left: 8px;
+}
+
+.profile-avatar-large {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-bio,
+.profile-followers,
+.profile-link {
+  padding: 0 15px;
+  margin: 5px 0;
+  font-size: 16px;
+}
+.profile-bio {
+  color: #333;
+}
+.profile-link {
+  color: #007bff; /* Color de enlace */
+  text-decoration: none;
+  display: block;
+}
+.profile-followers {
+  color: #8e8e93;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.profile-action-buttons {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+}
+.profile-edit-button,
+.profile-share-button {
+  flex-grow: 1;
+  background-color: white;
+  color: black;
+  border: 1px solid #dbdbdb;
+  padding: 8px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.profile-tabs {
+  display: flex;
+  border-bottom: 1px solid #dbdbdb;
+  margin-top: 10px;
+}
+.profile-tab-button {
+  flex-grow: 1;
+  background: none;
+  border: none;
+  padding: 15px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #8e8e93;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: color 0.2s, border-bottom-color 0.2s;
+}
+.profile-tab-button.tab-active {
+  color: black;
+  border-bottom-color: black;
+}
+
+.profile-posts-list {
+  padding: 0;
+}
+
+.profile-thread-item {
+  display: flex;
+  gap: 10px;
+  border-bottom: 1px solid #efefef;
+  padding: 15px;
+}
+
+.profile-thread-left-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.profile-thread-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-thread-line {
+  width: 2px;
+  flex-grow: 1;
+  background-color: #e0e0e0;
+  margin-top: 8px;
+}
+
+.profile-thread-right-column {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-bottom: 10px;
+}
+
+.profile-thread-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 3px;
+}
+
+.profile-thread-time {
+  font-size: 14px;
+  color: #8e8e93;
+}
+
+.profile-thread-options {
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.profile-thread-content {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.4;
+  margin: 0 0 10px 0;
+}
+
+.profile-thread-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #efefef;
+}
+
+.profile-thread-actions {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 8px;
+}
+.profile-action-icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.profile-thread-stats {
+  font-size: 14px;
+  color: #8e8e93;
+}
+
+.no-content-message {
+  padding: 30px;
+  text-align: center;
+  color: #8e8e93;
+}

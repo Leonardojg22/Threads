@@ -1,0 +1,189 @@
+.simulated-app-pc-container-activity {
+  background-color: #f0f0f0;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.threads-activity-frame {
+  width: 100%;
+  max-width: 700px;
+  height: 100vh;
+  background-color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.activity-content-wrapper {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 0 20px;
+}
+
+.activity-header {
+  padding: 15px 15px 5px;
+  background-color: white;
+}
+.activity-header h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+.activity-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 0;
+  background-color: white;
+  border-bottom: 1px solid #efefef;
+  overflow-x: scroll;
+  white-space: nowrap;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.activity-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-button {
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.tab-button.tab-active {
+  background-color: black;
+  color: white;
+}
+
+.activity-list-scroll {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  border-bottom: 1px solid #f9f9f9;
+}
+
+.activity-left-side {
+  display: flex;
+  align-items: center;
+}
+
+.activity-avatar-wrapper {
+  position: relative;
+  margin-right: 10px;
+}
+
+.activity-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.action-icon-badge {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.badge-like {
+  background-color: #ff3040;
+  color: white;
+  font-size: 12px;
+}
+.badge-follow {
+  background-color: #0095f6;
+  color: white;
+}
+.action-icon-badge.badge-reply,
+.action-icon-badge.badge-mention {
+  background-color: #f0f0f0; /* Color de fondo muy claro */
+  color: #333; /* Icono oscuro */
+  border: 1px solid #ddd;
+  font-size: 10px;
+}
+
+.activity-text-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-username {
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.verified-badge-activity {
+  color: #007bff;
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+.activity-action-time {
+  color: #8e8e93;
+  font-size: 14px;
+}
+
+.activity-follow-button {
+  flex-shrink: 0;
+  min-width: 90px;
+  background-color: white;
+  color: black;
+  border: 1px solid #dbdbdb;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+.activity-content-snippet {
+  color: #8e8e93;
+  font-size: 14px;
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.no-activity-message {
+  padding: 30px;
+  text-align: center;
+  color: #8e8e93;
+  font-size: 16px;
+}
+
+.bottom-nav-bar {
+  flex-shrink: 0;
+}

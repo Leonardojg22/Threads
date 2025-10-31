@@ -1,0 +1,128 @@
+@keyframes threadScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.threads-full-page-container-faithful {
+  background-color: #211a30;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  overflow: hidden;
+}
+
+.threads-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+  margin-bottom: 50px;
+}
+
+.threads-main-title-faithful {
+  font-size: 72px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-align: center;
+  margin: 0;
+
+  background: linear-gradient(90deg, #ffcc00 0%, #ff6600 50%, #ffcc00 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  position: relative;
+  z-index: 3;
+}
+
+.threads-moving-text-bg {
+  position: absolute;
+  top: -5px;
+  z-index: 1;
+  width: 200%; /* El doble de ancho para el movimiento */
+  height: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+
+  animation: threadScroll 15s linear infinite;
+}
+
+.threads-moving-text-bg::before {
+  content: "THREADS THREADS THREADS THREADS THREADS";
+  font-size: 72px;
+  font-weight: 900;
+  color: rgba(255, 204, 0, 0.1); /* Texto amarillo/naranja muy tenue */
+  white-space: nowrap;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.threads-small-text-faithful {
+  font-size: 28px;
+  font-weight: 600;
+  color: #c0c0c0;
+  display: block;
+  margin-top: -15px;
+  position: relative;
+  z-index: 2;
+}
+
+.threads-login-card-faithful {
+  width: 300px;
+  background-color: #3b333f;
+  border-radius: 15px;
+  padding: 10px 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.login-hint-faithful {
+  color: #bbb;
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.login-button-threads-faithful {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 5px;
+  border-radius: 8px;
+  background-color: #4a404d;
+  border: none;
+  cursor: pointer;
+}
+
+.username-text-threads-faithful {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  margin-left: 5px;
+}
+
+.confirmation-icon {
+  font-size: 20px;
+  color: white;
+  background-color: #8a3ab9;
+  padding: 5px;
+  border-radius: 8px;
+  line-height: 1;
+}
